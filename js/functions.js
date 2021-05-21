@@ -1,7 +1,9 @@
 const utils = {}; // eslint-disable-line no-unused-vars
 
 const dom = {
-  myList: document.getElementById('my-list'),
+  listLeft: document.getElementById('list-left'),
+  listMain: document.getElementById('list-main'),
+  listRight: document.getElementById('list-right'),
 };
 
 utils.filterArrForFemaleNames = function (arr) {
@@ -12,7 +14,7 @@ utils.filterArrForFemaleNames = function (arr) {
       femaleNames.push(name);
     }
   });
-  dom.myList.insertAdjacentHTML('beforeend', 'Female names:' + femaleNames + '<br>');
+  dom.listLeft.insertAdjacentHTML('beforeend', 'Female names:' + femaleNames + '<br>');
 };
 
 utils.filterEmployee = function (employees) {
@@ -30,7 +32,7 @@ utils.filterEmployee = function (employees) {
         if (key === 'salary') { employeeSalary.push(keyValue); }
       } */
   }
-  dom.myList.insertAdjacentHTML('beforeend', 'employeeNames:' + employeeNames + '<br>' + 'employeeSalary:' + employeeSalary + '<br>');
+  dom.listMain.insertAdjacentHTML('beforeend', 'employeeNames:' + employeeNames + '<br>' + 'employeeSalary:' + employeeSalary + '<br>');
 };
 
 utils.calculateSalaries = function (salaries) {
@@ -41,6 +43,6 @@ utils.calculateSalaries = function (salaries) {
   salaries.forEach(function (salary) {
     salaryTotal += salary;
   });
-  dom.myList.insertAdjacentHTML('beforeend', 'Salaries=> Min: ' + salaryMin + ' Max: ' + salaryMax + ' Total: ' + salaryTotal+'<br>');
+  dom.listRight.insertAdjacentHTML('beforeend', 'Salaries=> Min: ' + salaryMin + ' Max: ' + salaryMax + ' Total: ' + salaryTotal+'<br>');
   console.log('salaryMin: ', salaryMin, ' salaryMax: ', salaryMax, ' salaryTotal: ', salaryTotal);
 };
