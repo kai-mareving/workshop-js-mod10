@@ -1,0 +1,22 @@
+/* Variables */
+
+$color-light: #fff;
+$color-dark: #444;
+$color-green: #43BFC7;
+$color-blue: #2554C7;
+
+$font-text: 'Consolas', sans-serif;
+
+/* Global */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-light;
+  font-family: $font-text;
+  color: $color-dark;
+  font-size: 16px;
+  line-height: 1.7;
+}

@@ -1,0 +1,14 @@
+/* Variables */
+/* Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Consolas", sans-serif;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.7;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxjQUFBO0FBU0EsV0FBQTtBQUVBO0VBQ0Usc0JBQXNCO0FDUnhCOztBRFdBO0VBQ0UsZ0JBZGdCO0VBZWhCLG1DQVZnQztFQVdoQyxXQWZlO0VBZ0JmLGVBQWU7RUFDZixnQkFBZ0I7QUNSbEIiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
