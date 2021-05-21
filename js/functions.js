@@ -45,5 +45,18 @@ utils.calculateSalaries = function (salaries) {
   });
   dom.listRight.insertAdjacentHTML('beforeend', '<span style="text-align: center"><i class="fas fa-laptop-code"></i></span><br>');
   dom.listRight.insertAdjacentHTML('beforeend', 'Salaries=> Min: ' + salaryMin + ' Max: ' + salaryMax + ' Total: ' + salaryTotal+'<br>');
-  console.log('salaryMin: ', salaryMin, ' salaryMax: ', salaryMax, ' salaryTotal: ', salaryTotal);
+  // console.log('salaryMin: ', salaryMin, ' salaryMax: ', salaryMax, ' salaryTotal: ', salaryTotal);
+};
+
+utils.calcPersonSalaries = function (persons) {
+  let salaries = Object.values(persons);
+  let salaryMax = Math.max.apply(Math, salaries);
+  let salaryMin = Math.min.apply(Math, salaries);
+  let salaryTotal = 0;
+
+  salaries.forEach(function (salary) {
+    salaryTotal += salary;
+  });
+
+  console.log('calcPersonSalaries:', salaryMax, salaryMin, salaryTotal);
 };
