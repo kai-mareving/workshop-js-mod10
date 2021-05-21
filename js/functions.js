@@ -43,6 +43,7 @@ utils.calculateSalaries = function (salaries) {
   salaries.forEach(function (salary) {
     salaryTotal += salary;
   });
+  dom.listRight.insertAdjacentHTML('beforeend', '<span style="text-align: center"><i class="fas fa-laptop-code"></i></span><br>');
   dom.listRight.insertAdjacentHTML('beforeend', 'Salaries=> Min: ' + salaryMin + ' Max: ' + salaryMax + ' Total: ' + salaryTotal+'<br>');
   console.log('salaryMin: ', salaryMin, ' salaryMax: ', salaryMax, ' salaryTotal: ', salaryTotal);
 };
