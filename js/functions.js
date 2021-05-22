@@ -67,7 +67,5 @@ utils.createObjectWithProps = function (tags) {
     !uniqueTags[tag] ? uniqueTags[tag] = { appearances: 1 } : uniqueTags[tag].appearances++;
   }
 
-  // dom.listMain.insertAdjacentHTML('beforeend', 'FROM: ' + tags + '<br>');
-  // dom.listMain.insertAdjacentHTML('beforeend', 'TO: ' + uniqueTags + ':' + uniqueTags[tag].appearances); //? how to display obj in web page
   console.log('From: ', tags); console.log('To: ', uniqueTags);
 };
