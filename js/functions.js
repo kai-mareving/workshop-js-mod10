@@ -32,7 +32,8 @@ utils.filterEmployee = function (employees) {
         if (key === 'salary') { employeeSalary.push(keyValue); }
       } */
   }
-  dom.listMain.insertAdjacentHTML('beforeend', 'employeeNames:' + employeeNames + '<br>' + 'employeeSalary:' + employeeSalary + '<br>');
+  //& dom.listMain.insertAdjacentHTML('beforeend', 'employeeNames:' + employeeNames + '<br>' + 'employeeSalary:' + employeeSalary + '<br>');
+  return 'employeeNames:'+employeeNames+'. employeeSalary:'+employeeSalary;
 };
 
 utils.calculateSalaries = function (salaries) {
@@ -43,9 +44,7 @@ utils.calculateSalaries = function (salaries) {
   salaries.forEach(function (salary) {
     salaryTotal += salary;
   });
-  dom.listRight.insertAdjacentHTML('beforeend', '<span style="text-align: center"><i class="fas fa-laptop-code"></i></span><br>');
   dom.listRight.insertAdjacentHTML('beforeend', 'Salaries=> Min: ' + salaryMin + ' Max: ' + salaryMax + ' Total: ' + salaryTotal+'<br>');
-  // console.log('salaryMin: ', salaryMin, ' salaryMax: ', salaryMax, ' salaryTotal: ', salaryTotal);
 };
 
 utils.calcPersonSalaries = function (persons) {
@@ -59,4 +58,16 @@ utils.calcPersonSalaries = function (persons) {
   });
 
   console.log('calcPersonSalaries:', salaryMax, salaryMin, salaryTotal);
+};
+
+utils.createObjectWithProps = function (tags) {
+  let uniqueTags = {};
+
+  for (let tag of tags) {
+    !uniqueTags[tag] ? uniqueTags[tag] = { appearances: 1 } : uniqueTags[tag].appearances++;
+  }
+
+  // dom.listMain.insertAdjacentHTML('beforeend', 'FROM: ' + tags + '<br>');
+  // dom.listMain.insertAdjacentHTML('beforeend', 'TO: ' + uniqueTags + ':' + uniqueTags[tag].appearances); //? how to display obj in web page
+  console.log('From: ', tags); console.log('To: ', uniqueTags);
 };
